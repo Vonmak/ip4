@@ -52,12 +52,13 @@
     <!-- end of navbar section -->
 
     <!-- start of the homepage section -->
-    <div class="container">
+    <div class="homepage">
       <!-- selection page -->
-      <div class="form">
+      <div class="kitchen" style="background-image: url(images/chef.png)">
+        <h1 class="text-success"><strong>Welcome!!</strong></h1>
         <button
           type="button"
-          class="btn btn-success"
+          class="btn btn-warning text-success"
           data-bs-toggle="modal"
           data-bs-target="#myModal"
         >
@@ -95,16 +96,12 @@
 
               <!-- Modal footer -->
               <div class="modal-footer">
-                <button class="btn btn-success order" type="submit">
-                  Order
-                </button>
-
                 <button
-                  type="button"
-                  class="btn btn-danger"
+                  class="btn btn-success order"
+                  type="submit"
                   data-bs-dismiss="modal"
                 >
-                  Close
+                  Order
                 </button>
               </div>
             </div>
@@ -113,7 +110,14 @@
       </div>
       <!-- order item display page -->
       <div class="order">
-        div
+        <div class="pic text-center">
+          <img
+            src="images/serve.jpeg"
+            alt=""
+            class="order1 rounded-pill"
+            height="150"
+          />
+        </div>
         <table class="table table-striped table-hover table-responsive-sm">
           <thead>
             <tr>
@@ -142,15 +146,20 @@
         </div>
       </div>
 
-      <div class="text-center">
+      <div
+        class="text-center"
+        style="
+          background-image: url(images/package\ .jpeg);
+          background-size: cover;
+        "
+      >
         <div class="display-panel">
-          <h3>Your Total: <span></span></h3>
-
-          <h4>
-            <p>Hooray!! Your order has been received!!</p>
-            <p>In 15 to 45 minutes, you will receive your Pizza in</p>
-            <span></span>
-          </h4>
+          <button class="btn btn-info check-out" type="submit">Checkout</button>
+          <br />
+          <h3>Food Total Charge: <span></span></h3>
+          <br />
+          <button class="btn btn-info yes" type="submit">Deliver</button>
+          <button class="btn btn-info no" type="submit">I'm Around</button>
           <div class="location text-center">
             <input
               type="text"
@@ -158,18 +167,54 @@
               placeholder="Enter your location..."
               required
             />
-            <button class="btn btn-info complete" type="submit">
-              Complete
+            <br />
+            <!-- Button to invoke the modal -->
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              id="submit"
+            >
+              Submit
             </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hooray!!</h5>
+                  </div>
+
+                  <div class="modal-body">
+                    <!-- Data passed is displayed in this part of the modal body -->
+                    <h2>Total Payable: <span></span></h2>
+                    <h4>
+                      <p>Your order has been received!!</p>
+                      <p>In 15 to 45 minutes, you will receive your Pizza in</p>
+                      <span></span>
+                    </h4>
+                    <h6 id="modal_body"></h6>
+                    <button
+                      class="btn btn-danger close"
+                      type="submit"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <br />
-        <h5>Delivery fee outside CBD is <strong>kes.200</strong></h5>
-        <button class="btn btn-info yes" type="submit">Deliver</button>
-        <button class="btn btn-info no" type="submit">I'm Around</button
-        ><br /><br />
-
-        <button class="btn btn-info check-out" type="submit">Checkout</button>
       </div>
     </div>
     <!-- end of the homepage section -->
