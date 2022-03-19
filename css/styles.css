@@ -10,15 +10,14 @@
   text-decoration: none;
   color: #381838;
 }
-.col-sm-6 img {
-  height: 30vh;
-  width: 100%;
-}
+
+/* homepage*/
 .homepage {
   display: grid;
   grid-template-columns: 400px 1fr 400px;
   height: 55vh;
 }
+/* homepage kitchen section */
 .kitchen {
   background-size: cover;
   display: flex;
@@ -28,7 +27,13 @@
 }
 .form-control {
   margin: 20px;
+  width: 400px;
 }
-.order1:hover {
+/* homepage order section */
+/* .order1:hover {
   height: 100px;
 }
+.col-sm-6 img {
+  height: 30vh;
+  width: 100%;
+} */
