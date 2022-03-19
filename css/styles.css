@@ -46,7 +46,22 @@
   display: none;
 }
 
-.col-sm-6 img {
+/* homepage display section */
+
+.display-panel h3 {
+  color: #381838;
+}
+
+.check-out,
+.display-panel h3,
+.deliver,
+.around,
+.location,
+.submit {
+  display: none;
+  margin: 20px;
+}
+/* .col-sm-6 img {
   height: 30vh;
   width: 100%;
-}
+} */
