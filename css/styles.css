@@ -1,4 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  color: #381838;
+}
+.nav-link {
+  text-decoration: none;
+  color: #381838;
+}
 .col-sm-6 img {
   height: 30vh;
   width: 100%;
+}
+.homepage {
+  display: grid;
+  grid-template-columns: 400px 1fr 400px;
+  height: 55vh;
+}
+.kitchen {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-control {
+  margin: 20px;
+}
+.order1:hover {
+  height: 100px;
 }
