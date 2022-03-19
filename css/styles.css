@@ -20,6 +20,7 @@
 /* homepage kitchen section */
 .kitchen {
   background-size: cover;
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,10 +31,22 @@
   width: 400px;
 }
 /* homepage order section */
-/* .order1:hover {
+.order {
+  background-color: #381838;
+  border-radius: 50px;
+}
+.order1 {
+  margin: 20px;
+  background-color: #381838;
+}
+.order1:hover {
   height: 100px;
 }
+.order2 {
+  display: none;
+}
+
 .col-sm-6 img {
   height: 30vh;
   width: 100%;
-} */
+}
