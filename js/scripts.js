@@ -82,14 +82,14 @@ $(document).ready(function () {
       newTotal = newTotal + pizzaTotal;
       $(".display-panel h3 span").html(newTotal);
     });
-//     $(".btn.deliver").click(function () {
-//       let deliverFee = 300;
-//       $(".deliver").hide();
-//       $(".around").hide();
-//       $(".location").show();
+    $(".btn.deliver").click(function () {
+      let deliverFee = 300;
+      $(".deliver").hide();
+      $(".around").hide();
+      $(".location").show();
 
-//       $(".display-panel h3 span").html(newTotal + deliverFee);
-//     });
+      $(".display-panel h3 span").html(newTotal + deliverFee);
+    });
 //     $(".around").click(function () {
 //       $(".deliver").hide();
 //       $(".around").hide();
