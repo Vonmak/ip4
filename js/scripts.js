@@ -40,37 +40,37 @@ $(document).ready(function () {
     $(".check-out").show();
 
     // clicking one more button
-    // $(".more").click(function () {
-    //   let pSize = $(".size option:selected").val();
-    //   let pCrust = $(".crust option:selected").val();
-    //   let pToppings = $(".toppings option:selected").val();
-    //   let pizzaTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings);
-    //   order = order + 1;
-    //   newTotal = newTotal + pizzaTotal;
+    $(".more").click(function () {
+      let pSize = $(".size option:selected").val();
+      let pCrust = $(".crust option:selected").val();
+      let pToppings = $(".toppings option:selected").val();
+      let pizzaTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings);
+      order = order + 1;
+      newTotal = newTotal + pizzaTotal;
 
-    //   let pNew = new Pizza(pSize, pCrust, pToppings, pizzaTotal, order); //using the object pizza declared above
-      // append new pizza values to the table
-//       let newRow =
-//         '<tr><th scope="row">' +
-//         pNew.orderNo +
-//         '</th><td id="size">' +
-//         $(".size option:selected").text() +
-//         " - " +
-//         pNew.size +
-//         '</td><td id="crust">' +
-//         $(".crust option:selected").text() +
-//         " - " +
-//         pNew.crust +
-//         '</td><td id="toppings">' +
-//         $(".toppings option:selected").text() +
-//         " - " +
-//         pNew.toppings +
-//         '</td><td id="total">' +
-//         pNew.total +
-//         "</td></tr>";
+      let pNew = new Pizza(pSize, pCrust, pToppings, pizzaTotal, order); //using the object pizza declared above
+    //   append new pizza values to the table
+      let newRow =
+        '<tr><th scope="row">' +
+        pNew.orderNo +
+        '</th><td id="size">' +
+        $(".size option:selected").text() +
+        " - " +
+        pNew.size +
+        '</td><td id="crust">' +
+        $(".crust option:selected").text() +
+        " - " +
+        pNew.crust +
+        '</td><td id="toppings">' +
+        $(".toppings option:selected").text() +
+        " - " +
+        pNew.toppings +
+        '</td><td id="total">' +
+        pNew.total +
+        "</td></tr>";
 
-//       $("#pizza").append(newRow);
-//     });
+      $("#pizza").append(newRow);
+    });
 
 //     $(".btn.check-out").click(function () {
 //       $(".btn.more").hide();
