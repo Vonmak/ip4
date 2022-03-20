@@ -20,24 +20,24 @@ $(document).ready(function () {
 //  end of business logic
 
 // start of user interface logic
-// $(document).ready(function () {
+$(document).ready(function () {
   //   button click in modal
-//   $(".order").click(function () {
-//     let pSize = $(".size option:selected").val();
-//     let pCrust = $(".crust option:selected").val();
-//     let pToppings = $(".toppings option:selected").val();
-//     let pizzaTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings); //total of the values of options selected.
-//     let order = 1;
-//     let newTotal = 0;
+  $(".order").click(function () {
+    let pSize = $(".size option:selected").val();
+    let pCrust = $(".crust option:selected").val();
+    let pToppings = $(".toppings option:selected").val();
+    let pizzaTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings); //total of the values of options selected.
+    let order = 1;
+    let newTotal = 0;
     // appending the values to the table
-    // $("#size").html($(".size option:selected").text() + " - " + pSize);
-    // $("#crust").html($(".crust option:selected").text() + " - " + pCrust);
-    // $("#toppings").html(
-    //   $(".toppings option:selected").text() + " - " + pToppings
-    // );
-    // $("#total").html(pizzaTotal);
-    // $(".order2").show();
-    // $(".check-out").show();
+    $("#size").html($(".size option:selected").text() + " - " + pSize);
+    $("#crust").html($(".crust option:selected").text() + " - " + pCrust);
+    $("#toppings").html(
+      $(".toppings option:selected").text() + " - " + pToppings
+    );
+    $("#total").html(pizzaTotal);
+    $(".order2").show();
+    $(".check-out").show();
 
     // clicking one more button
     // $(".more").click(function () {
