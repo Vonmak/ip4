@@ -15,7 +15,6 @@ $(document).ready(function () {
   $(".around").hide();
   $(".display-panel h3").hide();
   $(".location").hide();
-  
 });
 //  end of business logic
 
@@ -49,7 +48,7 @@ $(document).ready(function () {
       newTotal = newTotal + pizzaTotal;
 
       let pNew = new Pizza(pSize, pCrust, pToppings, pizzaTotal, order); //using the object pizza declared above
-    //   append new pizza values to the table
+      //   append new pizza values to the table
       let newRow =
         '<tr><th scope="row">' +
         pNew.orderNo +
@@ -82,7 +81,7 @@ $(document).ready(function () {
       newTotal = newTotal + pizzaTotal;
       $(".display-panel h3 span").html(newTotal);
     });
-    $(".btn.deliver").click(function () {
+    $(".deliver").click(function () {
       let deliverFee = 300;
       $(".deliver").hide();
       $(".around").hide();
@@ -90,16 +89,16 @@ $(document).ready(function () {
 
       $(".display-panel h3 span").html(newTotal + deliverFee);
     });
-//     $(".around").click(function () {
-//       $(".deliver").hide();
-//       $(".around").hide();
-//       $(".location").show();
-//     });
-//     $(".enter").click(function () {
-//       let location = $(".location input").val();
-//       $(".location h4 span").html(location);
-//     });
-//   });
+    $(".around").click(function () {
+      $(".deliver").hide();
+      $(".around").hide();
+      $(".location").show();
+    });
+    $(".enter").click(function () {
+      let location = $(".location input").val();
+      $(".location h4 span").html(location);
+    });
+  });
   // reviews section
   $(".review1").click(function () {
     $(".review1").hide();
