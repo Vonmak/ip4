@@ -72,16 +72,16 @@ $(document).ready(function () {
       $("#pizza").append(newRow);
     });
 
-//     $(".btn.check-out").click(function () {
-//       $(".btn.more").hide();
-//       $(".btn.check-out").hide();
-//       $(".display-panel h3").show();
-//       $(".deliver").show();
-//       $(".around").show();
+    $(".check-out").click(function () {
+      $(".more").hide();
+      $(".check-out").hide();
+      $(".display-panel h3").show();
+      $(".deliver").show();
+      $(".around").show();
 
-//       newTotal = newTotal + pizzaTotal;
-//       $(".display-panel h3 span").html(newTotal);
-//     });
+      newTotal = newTotal + pizzaTotal;
+      $(".display-panel h3 span").html(newTotal);
+    });
 //     $(".btn.deliver").click(function () {
 //       let deliverFee = 300;
 //       $(".deliver").hide();
