@@ -32,9 +32,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#homepage">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#menu">Menu</a>
           </li>
@@ -136,11 +134,11 @@
         </div>
         <div class="order2">
           <table
-            class="table table-striped table-hover table-responsive-sm text-warning"
+            class="table table-responsive-sm text-warning"
           >
             <thead>
               <tr>
-                <th scope="col " class="text-white">Order No.</th>
+                <th scope="col" class="text-white">Order No.</th>
                 <th scope="col" class="text-white">Pizza Size</th>
                 <th scope="col" class="text-white">Crust</th>
                 <th scope="col" class="text-white">Toppings</th>
@@ -149,7 +147,7 @@
             </thead>
             <tbody id="pizza">
               <tr>
-                <th scope="row" class="text-warning">1</th>
+                <th scope="row" id="ono" class="text-warning">1</th>
                 <td id="size" class="text-warning"></td>
                 <td id="crust" class="text-warning"></td>
                 <td id="toppings" class="text-warning"></td>
@@ -159,18 +157,19 @@
           </table>
           <br />
           <div class="text-center">
-            <button class="btn btn-warning more" type="submit">
-              One More!!
-            </button>
+            <p class="text-white">Number of Pizza</p>
+            <input type="number" value="1" id="quantity" name="quantity" min="1" max="4" class="more">
           </div>
         </div>
+        <div class="news text-center text-white">Yaay!! Add More!</div>
         <p class="text-center text-white">
           Delicious Delicacy😋!! Yummy Pizza🍕... just for you🫵🏻.
         </p>
-        <div class="img text-center text-white"><h2>Go Pizza Shoping</h2><br><img src="images/cart.webp" alt="cart" height="200" style="border-radius: 10px;"></div>
+        <button class="btn btn-warning check-out" type="submit">
+          Checkout
+        </button>
+        <div class="img text-center text-white"><h2>Go Pizza Shopping</h2><br><img src="images/cart.webp" alt="cart" height="200" style="border-radius: 10px;"></div>
         <div class="text-center text-white quote">
-          
-          
           <p>
             Choose from the best, <br> <h3>snFFOvO's Pizza🍕</h3> is the <em>Best.</em><br>Tasty Pizza just for you!! <br> <h2>Pizza Power!!</h2>
           </p>
@@ -186,16 +185,13 @@
       >
         <div class="display-panel">
           <h3>Finish This. <br>It's Pizza Day.</h3>
-          <button class="btn btn-warning check-out" type="submit">
-            Checkout
-          </button>
+          
           <br />
-          <h3>Pizza🍕 Total Charge: <span></span></h3>
+          <h3 style="background-color: #381838; color: aliceblue; border-radius: 10px;">Pizza🍕 Total Charge: <span></span></h3>
           <br />
+          <h4 style="background-color: #381838; color: aliceblue; border-radius: 10px;">Delivery fee is: 300bob only!</h4>
           <button class="btn btn-success deliver" type="submit">Deliver</button>
-          <button class="btn btn-warning around" type="submit">
-            I'm Around
-          </button>
+          
           <br />
           <div class="location text-center">
             <input
@@ -213,6 +209,8 @@
             data-bs-target="#submitm">
               Submit
             </button>
+
+            
 
             <!-- The Modal -->
             <div class="modal fade" id="submitm">
@@ -233,12 +231,12 @@
                   <div class="modal-body bg-success">
                     <!-- Data passed is displayed in this part of the modal body -->
                     <h3>
-                      Pizza🍕 Total Charge: <span class="text-warning"></span>
+                      Pizza🍕 Total Charge: <br> <span class="text-warning"></span>
                     </h3>
-                    <h4>
+                    
                       <p>Your order has been received!!</p>
-                      <p>In 15 to 45 minutes, you will receive your Pizza in</p>
-                    </h4>
+                      <p>You will receive your Pizza in 15minutes at:</p>
+                    
                     <h4><span class="text-warning"></span></h4>
                   </div>
 
@@ -256,29 +254,19 @@
               </div>
             </div>
           </div>
+          <div class="about text-center text-white " style="background-color: #381838; border-radius: 10px;">
+            <h2>About Us</h2>
+            <p>
+              Helping you live a healthier, better life through food our
+              commitment to you is to get you our best on a daily basis. Offering
+              choice, quality and value in every aisle is how we hope to make your
+              shopping experience a genuine pleasure.
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <!-- end of the homepage section -->
-
-    <!-- start of the about us section -->
-    <div class="container-fluid" id="about">
-      <div class="row">
-        <div class="col-sm-6 text-center about">
-          <h3>About Us</h3>
-          <p>
-            Helping you live a healthier, better life through food our
-            commitment to you is to get you our best on a daily basis. Offering
-            choice, quality and value in every aisle is how we hope to make your
-            shopping experience a genuine pleasure.
-          </p>
-        </div>
-        <div class="col-sm-6 image">
-          <img src="images/young-pple.jpeg" alt="snFFOvO" />
-        </div>
-      </div>
-    </div>
-    <!-- end of the about us section -->
 
     <!-- start of the menu section -->
     <div class="container-fluid" id="menu">

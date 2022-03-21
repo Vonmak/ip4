@@ -10,16 +10,26 @@ function Pizza(size, toppings, crust, total, orderNo) {
 //   hiding data that will show once triggered
 $(document).ready(function () {
   $(".order2").hide();
+  $(".news").hide();
   $(".check-out").hide();
   $(".deliver").hide();
   $(".around").hide();
   $(".display-panel h3").hide();
   $(".location").hide();
+  $(".about").show();
 });
 //  end of business logic
 
 // start of user interface logic
 $(document).ready(function () {
+  let pSize = $(".size option:selected").val();
+  let pCrust = $(".crust option:selected").val();
+  let pToppings = $(".toppings option:selected").val();
+  let pTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings); //total of the values of options selected.
+  let numberOfPizza = 1;
+  let newTotal = 0;
+  let count = 1;
+
   $(".quote").mouseenter(function () {
     $(".quote").hide();
     $(".img").show();
@@ -32,12 +42,8 @@ $(document).ready(function () {
   $(".order").click(function () {
     $(".quote").hide();
     $(".img").hide();
-    let pSize = $(".size option:selected").val();
-    let pCrust = $(".crust option:selected").val();
-    let pToppings = $(".toppings option:selected").val();
-    let pTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings); //total of the values of options selected.
-    let order = 1;
-    let newTotal = 0;
+    $(".news").show();
+
     // appending the values to the table
     $("#size").html($(".size option:selected").text() + " - " + pSize);
     $("#crust").html($(".crust option:selected").text() + " - " + pCrust);
@@ -50,33 +56,14 @@ $(document).ready(function () {
 
     // clicking one more button
     $(".more").click(function () {
-      let pSize = $(".size option:selected").val();
-      let pCrust = $(".crust option:selected").val();
-      let pToppings = $(".toppings option:selected").val();
-      let pTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings);
-      order = order + 1;
+      numberOfPizza = numberOfPizza + 1;
       newTotal = newTotal + pTotal;
-
+      $("#total").html(pTotal) * numberOfPizza;
       let pNew = new Pizza(pSize, pCrust, pToppings, pTotal, order); //using the object pizza declared above
-      //   append new pizza values to the table
+      $("#total").html(pTotal * count);
       let newRow =
-        '<tr><th scope="row">' +
-        pNew.orderNo +
-        '</th><td id="size">' +
-        $(".size option:selected").text() +
-        " - " +
-        pNew.size +
-        '</td><td id="crust">' +
-        $(".crust option:selected").text() +
-        " - " +
-        pNew.crust +
-        '</td><td id="toppings">' +
-        $(".toppings option:selected").text() +
-        " - " +
-        pNew.toppings +
-        '</td><td id="total">' +
-        pNew.total +
-        "</td></tr>";
+        "<tr><th id='ono'>" +
+        numberOfPizza`<td id='total'>${pNew.pTotal}</td></tr>`;
 
       $("#pizza").append(newRow);
     });
@@ -87,9 +74,9 @@ $(document).ready(function () {
       $(".display-panel h3").show();
       $(".deliver").show();
       $(".around").show();
-      newTotal = newTotal + pTotal;
+      nTotal = newTotal + pTotal;
 
-      $(".display-panel h3 span").html(newTotal);
+      $(".display-panel h3 span").html(nTotal);
     });
     $(".deliver").click(function () {
       let deliverFee = 300;
@@ -99,11 +86,7 @@ $(document).ready(function () {
 
       $(".display-panel h3 span").html(newTotal + deliverFee);
     });
-    $(".around").click(function () {
-      $(".deliver").hide();
-      $(".around").hide();
-      $(".location").show();
-    });
+
     $(".enter").click(function () {
       let location = $(".location input").val();
       let message = "Please Enter your Location!!";

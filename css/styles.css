@@ -67,18 +67,9 @@
   margin: 20px;
 }
 /* about section */
-#about {
-  background-color: aliceblue;
-}
-.about .image {
-  margin-top: 50px;
+.about {
 }
 
-.image img {
-  border-radius: 10px;
-  height: 30vh;
-  width: 100%;
-}
 /* contact section */
 #contact {
   background-color: aliceblue;
