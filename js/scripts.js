@@ -20,6 +20,14 @@ $(document).ready(function () {
 
 // start of user interface logic
 $(document).ready(function () {
+  $(".quote").mouseenter(function () {
+    $(".quote").hide();
+    $(".img").show();
+  });
+  $(".img").mouseleave(function () {
+    $(".quote").show();
+    $(".img").hide();
+  });
   //   button click in modal
   $(".order").click(function () {
     let pSize = $(".size option:selected").val();
@@ -103,8 +111,6 @@ $(document).ready(function () {
         $(".location h4 span").html(location);
       }
     });
-
-    })
   });
   // reviews section
   $(".review1").click(function () {
