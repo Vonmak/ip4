@@ -15,11 +15,13 @@
 .homepage {
   display: grid;
   grid-template-columns: 400px 1fr 400px;
-  height: 55vh;
+  height: 100vh;
 }
 /* homepage kitchen section */
 .kitchen {
-  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -34,6 +36,7 @@
 .order {
   background-color: #381838;
   border-radius: 50px;
+  margin: 100px;
 }
 .order1 {
   margin: 20px;
@@ -42,10 +45,12 @@
 .order1:hover {
   height: 100px;
 }
-.order2 {
+.quote {
+  margin-top: 70px;
+}
+.img {
   display: none;
 }
-
 /* homepage display section */
 
 .display-panel h3 {
@@ -58,10 +63,10 @@
 .around,
 .location,
 .submit {
-  display: none;
+  /* display: none; */
   margin: 20px;
 }
-/* .col-sm-6 img {
+.col-sm-6 img {
   height: 30vh;
   width: 100%;
-} */
+}
