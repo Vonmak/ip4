@@ -25,7 +25,7 @@ $(document).ready(function () {
     let pSize = $(".size option:selected").val();
     let pCrust = $(".crust option:selected").val();
     let pToppings = $(".toppings option:selected").val();
-    let pizzaTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings); //total of the values of options selected.
+    let pTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings); //total of the values of options selected.
     let order = 1;
     let newTotal = 0;
     // appending the values to the table
@@ -34,7 +34,7 @@ $(document).ready(function () {
     $("#toppings").html(
       $(".toppings option:selected").text() + " - " + pToppings
     );
-    $("#total").html(pizzaTotal);
+    $("#total").html(pTotal);
     $(".order2").show();
     $(".check-out").show();
 
@@ -43,11 +43,11 @@ $(document).ready(function () {
       let pSize = $(".size option:selected").val();
       let pCrust = $(".crust option:selected").val();
       let pToppings = $(".toppings option:selected").val();
-      let pizzaTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings);
+      let pTotal = parseInt(pSize) + parseInt(pCrust) + parseInt(pToppings);
       order = order + 1;
-      newTotal = newTotal + pizzaTotal;
+      newTotal = newTotal + pTotal;
 
-      let pNew = new Pizza(pSize, pCrust, pToppings, pizzaTotal, order); //using the object pizza declared above
+      let pNew = new Pizza(pSize, pCrust, pToppings, pTotal, order); //using the object pizza declared above
       //   append new pizza values to the table
       let newRow =
         '<tr><th scope="row">' +
@@ -77,8 +77,8 @@ $(document).ready(function () {
       $(".display-panel h3").show();
       $(".deliver").show();
       $(".around").show();
+      newTotal = newTotal + pTotal;
 
-      newTotal = newTotal + pizzaTotal;
       $(".display-panel h3 span").html(newTotal);
     });
     $(".deliver").click(function () {
@@ -96,8 +96,15 @@ $(document).ready(function () {
     });
     $(".enter").click(function () {
       let location = $(".location input").val();
-      $(".location h4 span").html(location);
+      let message = "Please Enter your Location!!";
+      if (location === "") {
+        $(".location h4 span").html(message);
+      } else {
+        $(".location h4 span").html(location);
+      }
     });
+
+    })
   });
   // reviews section
   $(".review1").click(function () {
