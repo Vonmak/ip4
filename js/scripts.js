@@ -30,6 +30,8 @@ $(document).ready(function () {
   });
   //   button click in modal
   $(".order").click(function () {
+    $(".quote").hide();
+    $(".img").hide();
     let pSize = $(".size option:selected").val();
     let pCrust = $(".crust option:selected").val();
     let pToppings = $(".toppings option:selected").val();
