@@ -79,3 +79,21 @@
   height: 30vh;
   width: 100%;
 }
+/* contact section */
+#contact {
+  background-color: aliceblue;
+  margin-top: 30px;
+}
+.con,
+.open {
+  color: aliceblue;
+  background-color: #381838;
+  margin: 50px;
+  border-radius: 10px;
+}
+.rev {
+  color: #381838;
+  border-color: #381838;
+  border-radius: 10px;
+  margin: 50px;
+}
